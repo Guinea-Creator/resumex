@@ -1,0 +1,101 @@
+
+
+
+
+
+h1{font-family: 'Roboto', sans-serif;} 
+h2{font-family: 'Roboto', sans-serif;}
+h3{font-family: 'Roboto', sans-serif;}
+h4{font-family: 'Roboto', sans-serif;}
+p{font-family: 'Roboto', sans-serif;}
+ul{font-family: 'Roboto', sans-serif;}
+li{font-family: 'Roboto', sans-serif;}
+
+header{
+    background-color: rgb(235, 163, 190);
+}
+
+
+/* .logo
+{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.graph1
+{
+  position: relative;
+  top: 0;
+  left: 0;
+} */
+
+
+
+
+
+
+footer{
+    background-color: rgb(235, 163, 190);
+    }
+
+
+/* Step 2 This builds your desktop and tablet grid */
+.container{
+    display: grid;
+    background-color:rgb(234, 238, 240);
+    height: 100%;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "o t"
+    "e t"
+    "x c"
+    "f f";
+}
+
+/* Step 3 Build your mobile grid What becomes active when the pixels are 800 or less*/
+@media screen and (max-width: 1000px) {
+
+.container{
+display: grid;
+/* background-color: rgb(99, 14, 185); */
+grid-gap: 3px;
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+grid-template-areas:
+/* "h" */
+"o"
+"e"
+"p"
+"t"
+"c"
+"f";
+}
+
+/* Step 1 This Starts the section css tags */
+.objective{
+    grid-area: o;
+}
+
+    .education{
+        grid-area: e;
+    }
+
+    .experience{
+        grid-area: p;
+    }
+
+    .technical-skills{
+        grid-area: t;
+    }
+
+    .community-service{
+        grid-area: c;
+    }
+
+footer{
+        grid-area: f;}
+}
+
